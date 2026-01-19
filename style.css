@@ -49,5 +49,55 @@ ul {
   margin: 10px;
   padding: 10px;
 }
+nav ul {
+  display: flex; /*enables flexbox layout  for navigation links*/
+}
+.card-container {
+  display: flex; /* enables flexbox layout for cards*/
+}
+.skills {
+  display: flex; /*enables flexbox layout for skills list */
+}
+nav ul {
+  flex-direction: row; /*aligns nav links horizontally*/
+  justify-content: space-around; /*spreads links evenly across the bar*/
+  align-items: center; /*vertically centres nav items*/
+}
+.card-container {
+   flex-direction: row; /* Aligns cards in a row */ 
+   justify-content: center; /* Centers cards horizontally */ 
+   align-items: flex-start; /* Aligns cards at the top */ 
+} 
+  .skills { 
+    flex-direction: row; /* Aligns skills side by side */ 
+    justify-content: center; /* Centers skills horizontally */
+   align-items: flex-start; /* Aligns skills at the top */
+}
+nav ul { display: flex; /* Flexbox makes nav horizontal */
+   flex-direction: row; /* Row layout for links */
+    justify-content: space-around; /* Even spacing */
+     background-color: #b60b0b; /* Dark background */ 
+     list-style: none; /* Removes bullets */
+      padding: 10px; 
+    } 
+    nav a { color: white; /* White text for contrast */
+       text-decoration: none; /* Removes underline */
+        padding: 8px 12px; 
+      }
+.card {
+  background-color: beige;
+  color: aqua;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.card-container {
+  flex-wrap: wrap; /* Allows cards to move to next line on smaller screens */
+}
+
+.skills {
+  flex-wrap: wrap; /* Skills wrap neatly on small screens */
+}
 
 
