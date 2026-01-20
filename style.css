@@ -1,103 +1,115 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:azure;
-    color: black;
-    margin: 3;
-    padding: 2;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: lightblue;
+  color:black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-.container {
-     margin: 20px;
-     padding: 15px; 
-      border: 2px solid red; 
-      background-color:brown;  }
 
-h1 {
-  font-size: 2em;
+
+header {
+  background:lightpink;
+  color:red;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background: #51345e;
+  border-radius: 4px;
+}
+
+
+nav a.active {
+  background: #bc661a;
+  color: #ffffff;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main h2 {
+  margin-bottom: 1rem;
   color: black;
-  margin-bottom: 10px;
 }
 
-h2 {
-  font-size: 1.5em;
-  color: rgb(30, 0, 255);
+main p {
+  margin-bottom: 1rem;
 }
 
 
-p {
-  line-height: 1.6;          /
-  
+footer {
+  background: lightcoral;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
 }
 
-ul {
-  list-style-type: circle ;   
-  margin-left: 20px;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
 }
 
-.debug {
-  border: 1px dashed red;                     
-  background-color: yellowgreen; 
-}
-/* Reusable card style */
-.card {
-  padding: 20px;
-  margin: 10px;
-  border: 1px solid black;
-  background-color: brown;
+.btn {
+  display: inline-block;
+  background: #1abc9c;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.spacing {
-  margin: 10px;
-  padding: 10px;
-}
-nav ul {
-  display: flex; /*enables flexbox layout  for navigation links*/
-}
-.card-container {
-  display: flex; /* enables flexbox layout for cards*/
-}
-.skills {
-  display: flex; /*enables flexbox layout for skills list */
-}
-nav ul {
-  flex-direction: row; /*aligns nav links horizontally*/
-  justify-content: space-around; /*spreads links evenly across the bar*/
-  align-items: center; /*vertically centres nav items*/
-}
-.card-container {
-   flex-direction: row; /* Aligns cards in a row */ 
-   justify-content: center; /* Centers cards horizontally */ 
-   align-items: flex-start; /* Aligns cards at the top */ 
-} 
-  .skills { 
-    flex-direction: row; /* Aligns skills side by side */ 
-    justify-content: center; /* Centers skills horizontally */
-   align-items: flex-start; /* Aligns skills at the top */
-}
-nav ul { display: flex; /* Flexbox makes nav horizontal */
-   flex-direction: row; /* Row layout for links */
-    justify-content: space-around; /* Even spacing */
-     background-color: #b60b0b; /* Dark background */ 
-     list-style: none; /* Removes bullets */
-      padding: 10px; 
-    } 
-    nav a { color: white; /* White text for contrast */
-       text-decoration: none; /* Removes underline */
-        padding: 8px 12px; 
-      }
-.card {
-  background-color: beige;
-  color: aqua;
-  padding: 20px;
-  width: 250px;
-  border-radius: 8px;
-  margin: 10px;
-}
-.card-container {
-  flex-wrap: wrap; /* Allows cards to move to next line on smaller screens */
-}
-
-.skills {
-  flex-wrap: wrap; /* Skills wrap neatly on small screens */
+.btn:hover {
+  background: #16a085;
 }
 
 
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
